@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood to Flower Picker</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: linear-gradient(to bottom, #fff8f2, #ffeef5);
+      color: #4b2e2e;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    h1 {
+      color: #8b3a62;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .description {
+      margin-bottom: 25px;
+    }
+
+    select {
+      width: 250px;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #d98ca3;
+      border-radius: 10px;
+      margin: 15px 0;
+      background-color: #fffafc;
+    }
+
+    button {
+      background-color: #d98ca3;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #b86b86;
+    }
+
+    .result-box {
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 15px;
+      background-color: #fff6fa;
+      border: 2px solid #f0c8d6;
+      display: none;
+    }
+
+    .flower-name {
+      font-size: 30px;
+      color: #8b3a62;
+      margin-bottom: 10px;
+    }
+
+    .flower-emoji {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      color: #8b3a62;
+      font-weight: bold;
+      border: 2px solid #d98ca3;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    .back-link:hover {
+      background-color: #ffeaf0;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #6b4b4b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Find Your Flower Match</h1>
+    <p class="description">
+      Select your mood and this app will match you with a flower that fits your personality today.
+    </p>
+
+    <label for="mood"><strong>Choose your mood:</strong></label><br>
+    <select id="mood">
+      <option value="">-- Select a mood --</option>
+      <option value="happy">Happy</option>
+      <option value="calm">Calm</option>
+      <option value="romantic">Romantic</option>
+      <option value="energetic">Energetic</option>
+      <option value="thoughtful">Thoughtful</option>
+      <option value="confident">Confident</option>
+    </select><br>
+
+    <button onclick="pickFlower()">Find My Flower</button>
+
+    <div class="result-box" id="resultBox">
+      <div class="flower-emoji" id="flowerEmoji"></div>
+      <div class="flower-name" id="flowerName"></div>
+      <p id="flowerMessage"></p>
+    </div>
+
+    <a class="back-link" href="fromscratch.html">Back to Scratch Page</a>
+
+    <div class="footer">
+      Created as a small AI-assisted web app for my final project.
+    </div>
+  </div>
+
+  <script>
+    function pickFlower() {
+      const mood = document.getElementById("mood").value;
+      const resultBox = document.getElementById("resultBox");
+      const flowerName = document.getElementById("flowerName");
+      const flowerMessage = document.getElementById("flowerMessage");
+      const flowerEmoji = document.getElementById("flowerEmoji");
+
+      if (mood === "") {
+        flowerName.textContent = "Please choose a mood first.";
+        flowerMessage.textContent = "Pick one from the dropdown menu, then click the button again.";
+        flowerEmoji.textContent = "🌼";
+        resultBox.style.display = "block";
+        return;
+      }
+
+      if (mood === "happy") {
+        flowerName.textContent = "Sunflower";
+        flowerMessage.textContent = "You match the sunflower because you are bright, cheerful, and bring positive energy wherever you go.";
+        flowerEmoji.textContent = "🌻";
+      } 
+      else if (mood === "calm") {
+        flowerName.textContent = "Lavender";
+        flowerMessage.textContent = "You match lavender because you have a peaceful, soothing presence and make everything feel more relaxed.";
+        flowerEmoji.textContent = "💜";
+      } 
+      else if (mood === "romantic") {
+        flowerName.textContent = "Rose";
+        flowerMessage.textContent = "You match the rose because you are classic, emotional, and full of beauty and meaning.";
+        flowerEmoji.textContent = "🌹";
+      } 
+      else if (mood === "energetic") {
+        flowerName.textContent = "Tulip";
+        flowerMessage.textContent = "You match the tulip because you are colorful, lively, and full of fresh energy.";
+        flowerEmoji.textContent = "🌷";
+      } 
+      else if (mood === "thoughtful") {
+        flowerName.textContent = "Orchid";
+        flowerMessage.textContent = "You match the orchid because you are thoughtful, unique, and quietly impressive.";
+        flowerEmoji.textContent = "🌸";
+      } 
+      else if (mood === "confident") {
+        flowerName.textContent = "Peony";
+        flowerMessage.textContent = "You match the peony because you stand out naturally and have a bold but beautiful presence.";
+        flowerEmoji.textContent = "🌺";
+      }
+
+      resultBox.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

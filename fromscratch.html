@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Flowers</title>
+    <link rel="stylesheet" href="css/mystyles.css">
+   <div class="content-box">
+    <h2>My Web App</h2>
+    <p>
+        I also created a small interactive web app for this project.
+    </p>
+    <a class="nav-link" href="flowerapp.html">Open My Mood to Flower Picker</a>
+</div>
+</head>
+<body id="top">
+
+    <div class="header">
+        <h1>My Favorite Flowers</h1>
+        <p class="subtitle">
+            Flowers bring color, fragrance, and personality to the world. This page shares a few of my favorites and why I love them.
+        </p>
+
+        <div class="nav-box">
+            <a href="index.html" class="nav-link">Home Page</a>
+    
+            <a href="#video-section" class="nav-link">Jump to Video</a>
+            <a href="#tableau-section" class="nav-link">Jump to Tableau Graph</a>
+        </div>
+    </div>
+
+    <div class="content-box">
+        <h2>Why I Love Flowers</h2>
+        <p>
+            Flowers are one of my favorite parts of nature because each kind has its own look, meaning, and season.
+            Some are bright and cheerful, while others are elegant and calming. I especially love flowers that add
+            beauty to gardens, bouquets, and outdoor spaces.
+        </p>
+    </div>
+
+    <div class="image-box">
+        <h2>Beautiful Roses</h2>
+        <img 
+            src="assets/img/rose.png"
+            alt="Rose bush with many blooming flowers">
+        <p>
+            This beautiful rose garden shows why flowers are so inspiring. They can completely transform a space.
+        </p>
+    </div>
+
+    <div class="list-box">
+        <h2>My Top Flower Picks</h2>
+        
+
+        <ol>
+            <li>Roses
+                <ul>
+                    <li>Known for elegance and romance</li>
+                    <li>Come in many colors like red, pink, white, and yellow</li>
+                    <li>Smell amazing in bouquets and gardens</li>
+                </ul>
+            </li>
+            <li>Sunflowers
+                <ul>
+                    <li>Bright and cheerful appearance</li>
+                    <li>Turn toward the sun as they grow</li>
+                    <li>Great for summer gardens</li>
+                </ul>
+            </li>
+            <li>Tulips
+                <ul>
+                    <li>Simple and clean shape</li>
+                    <li>Popular in spring</li>
+                    <li>Available in many vibrant colors</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="content-box">
+        <h2>Favorite Flower Facts</h2>
+        <p>
+            Roses are often associated with love, sunflowers symbolize happiness and positivity, and tulips are a classic sign of spring.
+            I like flowers not only for how they look, but also for the feelings and meanings people connect to them.
+        </p>
+        <p>
+            <a href="#top" class="back-top">Back to Top</a>
+        </p>
+    </div>
+
+    <div class="video-box" id="video-section">
+        <h2>Flower Video</h2>
+        <p>Here is a YouTube video about beautiful flowers and gardens:</p>
+
+        <div class="video-box" id="video-section">
+    <h2>Flower Video</h2>
+    <p>Here is a YouTube video about flowers:</p>
+
+    <div class="video-wrapper">
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/TvYwNZDhw1E"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+    <div class="tableau-box" id="tableau-section">
+        <h2>Interactive Tableau Graph</h2>
+        <p>
+            This is a live Tableau visualization embedded directly into the page.
+        </p>
+
+        <div class='tableauPlaceholder' id='viz168flowers' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Sample Superstore Dashboard'
+                         src='https://public.tableau.com/static/images/Sa/SampleSuperstore_17706808088870/Dashboard1/1.png'
+                         style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='SampleSuperstore_17706808088870/Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='showVizHome' value='no' />
+            </object>
+        </div>
+
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz168flowers');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width = '100%';
+            vizElement.style.height = '700px';
+
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </div>
+
+    <div class="footer">
+        <p>Created as a from-scratch HTML/CSS page about my favorite flowers.</p>
+    </div>
+
+</body>
+</html>
